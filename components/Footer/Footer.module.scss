@@ -1,0 +1,28 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 90px;
+}
+
+.icons {
+  margin: 12px 0px;
+}
+
+.icon {
+  color: #888;
+  padding: 4px 8px;
+  transition-duration: 300ms;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #888;
+}
