@@ -23,6 +23,11 @@
   align-items: center;
   justify-content: left;
   padding: 1rem 2rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 1rem 2rem 0;
+    justify-content: center;
+  }
 }
 
 .navItem {
