@@ -11,7 +11,7 @@ const About = () => {
       </Head>
       <h2 className={utilStyles.title}>About</h2>
       <div className={utilStyles.body}>
-        <p>Kiera is a creative thinker from Ithaca, NY.
+        <p>Kiera Carman is a creative thinker from Ithaca, NY.
           She likes writing crafty code and breaking down big problems
           into bite-sized chunks.</p>  
         <p>
