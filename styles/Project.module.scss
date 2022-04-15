@@ -1,0 +1,39 @@
+.description {
+  padding: 0 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.hero {
+  height: 480px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 32px -10px rgba(0,0,0,0.30);
+  margin: 60px 0px;
+  
+  .image {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.backButton {
+  padding: 1rem;
+  text-align: left;
+  font-size: 24px;
+
+  a {
+    transition-duration: 300ms;
+    font-weight: 300;
+    color: var(--lightGrey-color);
+
+    &:hover {
+      color: var(--darkGrey-color);
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    text-align: center;
+  }
+}

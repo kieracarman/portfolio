@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import styles from './Card.module.scss'
+import styles from '../styles/Card.module.scss'
 
 const Card = (props) => {
   return (
@@ -10,7 +10,14 @@ const Card = (props) => {
         <Link href={props.link}>
           <a>
             <div className={styles.image}>
-              Image
+              <Image 
+                priority
+                src={`/images/${props.id}-screenshot.png`}
+                width={1536}
+                height={2048}
+                alt='project screenshot'
+                className={styles.image}
+              />
             </div>
             <div className={styles.text}>
               <div className={styles.title}>{props.title}</div>
