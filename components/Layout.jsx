@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import cn from 'classnames'
 import {
   FiTwitter,
   FiGithub,
@@ -8,26 +10,31 @@ import {
 import { NowPlaying } from '../components'
 import styles from '../styles/Layout.module.scss'
 
+const NavItem = ({ href, text }) => {
+  const router = useRouter()
+  const isActive = router.asPath === href
+
+  return (
+    <div className={styles.navItem}>
+      {isActive ? (
+        <span className={styles.navItemActive}>{text}</span>
+      ) : (
+        <Link href={href}>
+          <a>{text}</a>
+        </Link>
+      )}
+    </div>
+  )
+}
+
 const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <header className={styles.navbar}>
-        <div className={styles.navItem}>
-          <Link href='/'>
-            <a>Home</a>
-          </Link>
-        </div>
-        <div className={styles.navItem}>
-          <Link href='/about'>
-            <a>About</a>
-          </Link>
-        </div>
-        <div className={styles.navItem}>
-          <Link href='/projects'>
-            <a>Projects</a>
-          </Link>
-        </div>
-      </header>
+      <nav className={styles.navbar}>
+        <NavItem href='/' text='Home' />
+        <NavItem href='/about' text='About' />
+        <NavItem href='/projects' text='Projects' />
+      </nav>
       <main className={styles.view}>
         <section className={styles.content}>{children}</section>
       </main>
