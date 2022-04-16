@@ -1,0 +1,26 @@
+.spotify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+    svg {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+}
+
+.spotifyText {
+    margin: 0 8px;
+
+    p, a {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--grey-color);
+
+        span {
+            color: var(--lightGrey-color);
+        }
+    }
+}

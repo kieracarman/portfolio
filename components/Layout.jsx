@@ -5,6 +5,7 @@ import {
   FiLinkedin
 } from 'react-icons/fi'
 
+import { NowPlaying } from '../components'
 import styles from '../styles/Layout.module.scss'
 
 const Layout = ({ children }) => {
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
         <section className={styles.content}>{children}</section>
       </main>
       <footer className={styles.footer}>
+        <NowPlaying />
         <div className={styles.footerIcons}>
           <a href='https://twitter.com/awildkiera' className={styles.footerIcon}><FiTwitter /></a>
           <a href='https://github.com/kieracarman' className={styles.footerIcon}><FiGithub /></a>

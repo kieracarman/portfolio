@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { Layout } from '../components'
-import utilStyles from '../styles/utils.module.scss'
 
 const Home = () => {
   return (
