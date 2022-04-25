@@ -1,0 +1,33 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 6.25rem;
+  background-color: var(--lightGrey-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
+}
+
+.locked {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 6.25rem;
+  background-color: var(--lightGrey-color);
+  color: var(--white-color);
+  opacity: 40%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem 0.5rem 0 0;
+  cursor: default;
+  text-decoration: line-through;
+}
