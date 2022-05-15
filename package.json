@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
     "classnames": "^2.3.1",
     "motion": "^10.7.2",
     "next": "12.1.5",

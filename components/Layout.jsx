@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
         <NavItem href='/' text='Home' />
         <NavItem href='/about' text='About' />
         <NavItem href='/projects' text='Projects' />
+        <NavItem href='/contact' text='Contact' />
       </nav>
       <main className={styles.view}>
         <section className={styles.content}>{children}</section>
