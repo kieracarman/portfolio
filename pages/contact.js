@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 
 import { Layout } from '../components'
@@ -5,6 +6,8 @@ import styles from '../styles/Contact.module.scss'
 import utilStyles from '../styles/utils.module.scss'
 
 const Contact = () => {
+    const [submitted, setSubmitted] = useState(false)
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         const formData = {}
@@ -16,6 +19,7 @@ const Contact = () => {
             method: 'POST',
             body: JSON.stringify(formData)
         })
+        setSubmitted(true)
     }
 
     return (
@@ -39,7 +43,7 @@ const Contact = () => {
                     <textarea className={styles.textArea} name='message' />
                 </p>
                 <p>
-                    <button className={styles.button}>Submit</button>
+                    {!submitted ? <button className={styles.button}>Submit</button> : 'Thanks for your message!'}
                 </p>
             </form>
         </Layout>
