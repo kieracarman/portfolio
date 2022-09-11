@@ -4,7 +4,7 @@
     "title": "Ithaca Covid Status Dashboard",
     "subtitle": "Displaying dynamic Covid data for an at-a-glance look at the most important numbers.",
     "category": "Web App",
-    "demo": "https://ithaca-covid-status.herokuapp.com",
+    "demo": "https://ithaca-covid-status.vercel.app/",
     "code": "https://github.com/kieracarman/ithaca-covid-status",
     "description": [
       "This minimalistic app fetches covid data from the Tompkins County Health Department and parses out the most important numbers to show the general status of covid risk in the area.",
