@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Layout } from '../components'
+import Layout from '@components/Layout'
 
 const Home = () => {
   return (
@@ -15,10 +15,12 @@ const Home = () => {
         This is my portfolio site. Feel free to browse my{' '}
         <Link href='/projects'>
           <a>projects</a>
-        </Link>, or read more{' '}
+        </Link>
+        , or read more{' '}
         <Link href='/about'>
           <a>about</a>
-        </Link> me.
+        </Link>{' '}
+        me.
       </p>
     </Layout>
   )

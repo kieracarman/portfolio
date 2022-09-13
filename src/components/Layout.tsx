@@ -1,16 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import cn from 'classnames'
-import {
-  FiTwitter,
-  FiGithub,
-  FiLinkedin
-} from 'react-icons/fi'
+import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi'
 
-import { NowPlaying } from '../components'
-import styles from '../styles/Layout.module.scss'
+import { NowPlaying } from './'
+import styles from '@styles/Layout.module.scss'
+import { ReactNode } from 'react'
 
-const NavItem = ({ href, text }) => {
+const NavItem = ({ href, text }: { href: string; text: string }) => {
   const router = useRouter()
   const isActive = router.asPath === href
 
@@ -27,7 +23,7 @@ const NavItem = ({ href, text }) => {
   )
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
@@ -42,9 +38,24 @@ const Layout = ({ children }) => {
       <footer className={styles.footer}>
         <NowPlaying />
         <div className={styles.footerIcons}>
-          <a href='https://twitter.com/awildkiera' className={styles.footerIcon}><FiTwitter /></a>
-          <a href='https://github.com/kieracarman' className={styles.footerIcon}><FiGithub /></a>
-          <a href='https://linkedin.com/in/kiera-carman' className={styles.footerIcon}><FiLinkedin /></a>
+          <a
+            href='https://twitter.com/awildkiera'
+            className={styles.footerIcon}
+          >
+            <FiTwitter />
+          </a>
+          <a
+            href='https://github.com/kieracarman'
+            className={styles.footerIcon}
+          >
+            <FiGithub />
+          </a>
+          <a
+            href='https://linkedin.com/in/kiera-carman'
+            className={styles.footerIcon}
+          >
+            <FiLinkedin />
+          </a>
         </div>
         <div className={styles.copyright}>© 2022 Kiera Carman</div>
       </footer>

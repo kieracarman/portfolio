@@ -1,8 +1,9 @@
 import Head from 'next/head'
 
-import { Layout, Card } from '../../components'
-import styles from '../../styles/Projects.module.scss'
-import utilStyles from '../../styles/utils.module.scss'
+import Layout from '@components/Layout'
+import Card from '@components/Card'
+import styles from '@styles/Projects.module.scss'
+import utilStyles from '@styles/utils.module.scss'
 
 import projects from '@content/projects.json'
 

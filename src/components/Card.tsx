@@ -3,14 +3,21 @@ import Image from 'next/image'
 
 import styles from '../styles/Card.module.scss'
 
-const Card = (props) => {
+type TCardProps = {
+  link: string
+  id: string
+  title: string
+  category: string
+}
+
+const Card = (props: TCardProps) => {
   return (
     <div className={styles.item}>
       <div className={styles.card}>
         <Link href={props.link}>
           <a>
             <div className={styles.image}>
-              <Image 
+              <Image
                 priority
                 src={`/images/${props.id}-screenshot.png`}
                 width={1536}
@@ -27,7 +34,7 @@ const Card = (props) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Card
