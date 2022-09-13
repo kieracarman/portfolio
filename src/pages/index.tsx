@@ -9,7 +9,7 @@ const Home = () => {
       <Head>
         <title>Kiera Carman</title>
       </Head>
-      <h1 className='text-green-700'>Hi, my name is Kiera.</h1>
+      <h1>Hi, my name is Kiera.</h1>
       <h3>I design and build web applications.</h3>
       <p>
         This is my portfolio site. Feel free to browse my{' '}
