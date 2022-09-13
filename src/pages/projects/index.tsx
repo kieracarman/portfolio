@@ -4,7 +4,7 @@ import { Layout, Card } from '../../components'
 import styles from '../../styles/Projects.module.scss'
 import utilStyles from '../../styles/utils.module.scss'
 
-import projects from '../../projects.json'
+import projects from '@content/projects.json'
 
 const Projects = () => {
   return (

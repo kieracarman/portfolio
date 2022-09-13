@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Layout, Buttons } from '../../components'
-import projects from '../../projects.json'
+import projects from '@content/projects.json'
 import styles from '../../styles/Project.module.scss'
 import utilStyles from '../../styles/utils.module.scss'
 
