@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { animate } from 'motion'
 
 import fetcher from '@lib/fetcher'
-import styles from '@styles/NowPlaying.module.scss'
 
 type NowPlayingSong = {
   album: string
@@ -54,10 +53,10 @@ const AnimatedBars = () => {
   }, [])
 
   return (
-    <div className={styles.bars}>
-      <span id='bar1' className={styles.bar1} />
-      <span id='bar2' className={styles.bar2} />
-      <span id='bar3' className={styles.bar3} />
+    <div>
+      <span id='bar1' />
+      <span id='bar2' />
+      <span id='bar3' />
     </div>
   )
 }
@@ -66,7 +65,7 @@ const NowPlaying = () => {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
 
   return (
-    <div className={styles.spotify}>
+    <div>
       <svg viewBox='0 0 168 168'>
         <path
           fill='#1ED760'
@@ -74,7 +73,7 @@ const NowPlaying = () => {
         />
       </svg>
       {data?.songUrl ? <AnimatedBars /> : ''}
-      <div className={styles.spotifyText}>
+      <div>
         {data?.songUrl ? (
           <a href={data.songUrl} target='_blank' rel='noopener noreferrer'>
             {data.title}

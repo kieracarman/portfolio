@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import Layout from '@components/Layout'
-import utilStyles from '@styles/utils.module.scss'
 
 const About = () => {
   return (
@@ -9,8 +8,8 @@ const About = () => {
       <Head>
         <title>About</title>
       </Head>
-      <h2 className={utilStyles.title}>About</h2>
-      <div className={utilStyles.body}>
+      <h2>About</h2>
+      <div>
         <p>
           Kiera Carman is a creative thinker from Ithaca, NY. She likes writing
           crafty code and breaking down big problems into bite-sized chunks.

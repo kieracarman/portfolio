@@ -2,8 +2,6 @@ import Head from 'next/head'
 
 import Layout from '@components/Layout'
 import Card from '@components/Card'
-import styles from '@styles/Projects.module.scss'
-import utilStyles from '@styles/utils.module.scss'
 
 import projects from '@content/projects.json'
 
@@ -13,8 +11,8 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <h2 className={utilStyles.title}>Projects</h2>
-      <div className={styles.grid}>
+      <h2>Projects</h2>
+      <div>
         {projects.map(({ id, category, title }, index) => (
           <Card
             id={id}

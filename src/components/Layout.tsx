@@ -4,16 +4,15 @@ import { useRouter } from 'next/router'
 import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi'
 
 import NowPlaying from './NowPlaying'
-import styles from '@styles/Layout.module.scss'
 
 const NavItem = ({ href, text }: { href: string; text: string }) => {
   const router = useRouter()
   const isActive = router.asPath === href
 
   return (
-    <div className={styles.navItem}>
+    <div>
       {isActive ? (
-        <span className={styles.navItemActive}>{text}</span>
+        <span>{text}</span>
       ) : (
         <Link href={href}>
           <a>{text}</a>
@@ -25,39 +24,30 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={styles.container}>
-      <nav className={styles.navbar}>
+    <div>
+      <nav className='flex items-center justify-between text-red-700'>
         <NavItem href='/' text='Home' />
         <NavItem href='/about' text='About' />
         <NavItem href='/projects' text='Projects' />
         <NavItem href='/contact' text='Contact' />
       </nav>
-      <main className={styles.view}>
-        <section className={styles.content}>{children}</section>
+      <main>
+        <section>{children}</section>
       </main>
-      <footer className={styles.footer}>
+      <footer>
         <NowPlaying />
-        <div className={styles.footerIcons}>
-          <a
-            href='https://twitter.com/awildkiera'
-            className={styles.footerIcon}
-          >
+        <div>
+          <a href='https://twitter.com/awildkiera'>
             <FiTwitter />
           </a>
-          <a
-            href='https://github.com/kieracarman'
-            className={styles.footerIcon}
-          >
+          <a href='https://github.com/kieracarman'>
             <FiGithub />
           </a>
-          <a
-            href='https://linkedin.com/in/kiera-carman'
-            className={styles.footerIcon}
-          >
+          <a href='https://linkedin.com/in/kiera-carman'>
             <FiLinkedin />
           </a>
         </div>
-        <div className={styles.copyright}>© 2022 Kiera Carman</div>
+        <div>© {new Date().getFullYear()} Kiera Carman</div>
       </footer>
     </div>
   )

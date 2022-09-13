@@ -5,8 +5,6 @@ import Image from 'next/image'
 import Layout from '@components/Layout'
 import Buttons from '@components/Buttons'
 import projects from '@content/projects.json'
-import styles from '../../styles/Project.module.scss'
-import utilStyles from '../../styles/utils.module.scss'
 
 export async function getStaticPaths() {
   const paths = projects.map(({ id }) => {
@@ -37,27 +35,26 @@ const Project = ({ project }) => {
       <Head>
         <title>{project.title}</title>
       </Head>
-      <div className={utilStyles.title}>
+      <div>
         <h2>{project.title}</h2>
         <h4>{project.subtitle}</h4>
         <Buttons demo={project.demo} code={project.code} />
       </div>
-      <div className={styles.hero}>
+      <div>
         <Image
           priority
           src={`/images/${project.id}-screenshot-desktop.png`}
           alt='Project Screenshot'
           width={2560}
           height={1600}
-          className={styles.image}
         />
       </div>
-      <div className={styles.description}>
+      <div>
         {project.description.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>
-      <div className={styles.backButton}>
+      <div>
         <Link href='/projects'>
           <a>← back to projects</a>
         </Link>
