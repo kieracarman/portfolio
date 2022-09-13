@@ -1,11 +1,10 @@
-import { NextApiRequest } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next'
 import { getTopTracks } from '../../lib/spotify'
 
-export const config = {
-  runtime: 'experimental-edge'
-}
-
-export default async function handler(req: NextApiRequest) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const response = await getTopTracks()
   const { items } = await response.json()
 
@@ -15,11 +14,10 @@ export default async function handler(req: NextApiRequest) {
     title: track.name
   }))
 
-  return new Response(JSON.stringify({ tracks }), {
-    status: 200,
-    headers: {
-      'content-type': 'application/json',
-      'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
-    }
-  })
+  res.setHeader(
+    'cache-control',
+    'public, s-maxage=86400, stale-while-revalidate=43200'
+  )
+
+  return res.status(200).json({ tracks })
 }
