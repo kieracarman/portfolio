@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import styles from '../styles/Card.module.scss'
+import styles from '@styles/Card.module.scss'
 
 type TCardProps = {
   link: string

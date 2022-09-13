@@ -1,10 +1,10 @@
+import { ReactNode } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi'
 
-import { NowPlaying } from './'
+import NowPlaying from './NowPlaying'
 import styles from '@styles/Layout.module.scss'
-import { ReactNode } from 'react'
 
 const NavItem = ({ href, text }: { href: string; text: string }) => {
   const router = useRouter()

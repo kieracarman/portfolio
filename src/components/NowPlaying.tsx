@@ -2,8 +2,8 @@ import useSWR from 'swr'
 import { useEffect } from 'react'
 import { animate } from 'motion'
 
-import fetcher from '../lib/fetcher'
-import styles from '../styles/NowPlaying.module.scss'
+import fetcher from '@lib/fetcher'
+import styles from '@styles/NowPlaying.module.scss'
 
 type NowPlayingSong = {
   album: string
