@@ -1,6 +1,6 @@
 import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi'
 
-import NowPlaying from './NowPlaying'
+import NowPlaying from '@components/NowPlaying'
 
 const Footer = () => {
   return (
