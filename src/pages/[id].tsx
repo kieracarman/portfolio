@@ -35,30 +35,29 @@ const Project = ({ project }) => {
       <Head>
         <title>{project.title}</title>
       </Head>
-      <div>
+      <article className='prose'>
         <h2>{project.title}</h2>
         <h4>{project.subtitle}</h4>
         <Buttons demo={project.demo} code={project.code} />
-      </div>
-      <div>
-        <Image
-          priority
-          src={`/images/${project.id}-screenshot-desktop.png`}
-          alt='Project Screenshot'
-          width={2560}
-          height={1600}
-        />
-      </div>
-      <div>
-        {project.description.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </div>
-      <div>
-        <Link href='/projects'>
-          <a>← back to projects</a>
-        </Link>
-      </div>
+        <div>
+          <Image
+            src={`/images/${project.id}-screenshot-desktop.png`}
+            alt='Project Screenshot'
+            width={2560}
+            height={1600}
+          />
+        </div>
+        <div>
+          {project.description.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+        <div className='flex justify-center'>
+          <Link href='/projects'>
+            <a>← back to projects</a>
+          </Link>
+        </div>
+      </article>
     </Layout>
   )
 }
