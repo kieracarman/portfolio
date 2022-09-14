@@ -73,7 +73,7 @@ const NowPlaying = () => {
         />
       </svg>
       {data?.songUrl ? <AnimatedBars /> : ''}
-      <div className='font-medium text-accent opacity-80 hover:opacity-100 transition duration-200'>
+      <div className='font-bold text-accent opacity-80 hover:opacity-100 transition duration-200'>
         {data?.songUrl ? (
           <a href={data.songUrl} target='_blank' rel='noopener noreferrer'>
             {data.title}

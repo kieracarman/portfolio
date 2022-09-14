@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <section className='prose-lg px-4'>
-      <h2 className='mt-8 mb-2 text-accent'>Contact Me</h2>
+      <h2 className='mt-8 mb-2 text-accent font-semibold'>Contact Me</h2>
       <form method='post' onSubmit={handleSubmit}>
         <h4 className='mt-0 mb-6 px-1'>Have a question? Send me a message!</h4>
         <p>

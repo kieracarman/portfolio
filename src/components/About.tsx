@@ -3,7 +3,9 @@ import Link from 'next/link'
 const About = () => {
   return (
     <section className='prose-lg mb-12 px-4'>
-      <h2 className='text-accent mt-6 mb-4'>Hi, my name is Kiera!</h2>
+      <h2 className='text-accent mt-6 mb-4 font-extrabold'>
+        Hi, my name is Kiera!
+      </h2>
       <p>
         I&apos;m a software developer from Ithaca, NY. I like writing crafty
         code and breaking down big problems into bite-sized chunks.
@@ -22,7 +24,7 @@ const About = () => {
       </p> */}
       <div className='flex justify-center gap-4 mt-8'>
         <Link href='https://github.com/kieracarman'>
-          <a className='block px-8 py-2 text-center transition duration-200 border rounded-lg focus:outline-none text-background bg-cta  border-cta hover:text-white hover:border-white'>
+          <a className='block px-8 py-2 text-center font-bold transition duration-200 border rounded-lg focus:outline-none text-background bg-cta  border-cta hover:text-white hover:border-white'>
             Github
           </a>
         </Link>
