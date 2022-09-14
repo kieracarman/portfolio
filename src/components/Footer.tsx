@@ -4,20 +4,31 @@ import NowPlaying from '@components/NowPlaying'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='p-4'>
       <NowPlaying />
-      <div>
-        <a href='https://twitter.com/awildkiera'>
+      <div className='text-2xl flex justify-center gap-4 mb-2 text-accent'>
+        <a
+          href='https://twitter.com/awildkiera'
+          className='opacity-80 hover:opacity-100 transition duration-200'
+        >
           <FiTwitter />
         </a>
-        <a href='https://github.com/kieracarman'>
+        <a
+          href='https://github.com/kieracarman'
+          className='opacity-80 hover:opacity-100 transition duration-200'
+        >
           <FiGithub />
         </a>
-        <a href='https://linkedin.com/in/kiera-carman'>
+        <a
+          href='https://linkedin.com/in/kiera-carman'
+          className='opacity-80 hover:opacity-100 transition duration-200'
+        >
           <FiLinkedin />
         </a>
       </div>
-      <div>© {new Date().getFullYear()} Kiera Carman</div>
+      <div className='text-center text-accent opacity-50'>
+        © {new Date().getFullYear()} Kiera Carman
+      </div>
     </footer>
   )
 }

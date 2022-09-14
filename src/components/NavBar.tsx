@@ -11,7 +11,9 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
         <span>{text}</span>
       ) : (
         <Link href={href}>
-          <a>{text}</a>
+          <a className='transition duration-200 opacity-40 hover:opacity-100'>
+            {text}
+          </a>
         </Link>
       )}
     </div>
@@ -20,10 +22,19 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
 
 const NavBar = () => {
   return (
-    <header className='flex justify-between'>
-      <h3 className='uppercase'>Kiera Carman</h3>
-      <nav className='flex gap-4'>
+    <header className='p-4 flex items-center justify-between'>
+      <div className='uppercase font-medium text-xl text-accent transition duration-200 opacity-40 hover:opacity-100'>
+        <Link href='/'>
+          <a>Kiera Carman</a>
+        </Link>
+      </div>
+
+      {/* desktop nav links */}
+      <nav className='hidden md:flex text-accent'>
         <NavItem href='/' text='Home' />
+        <NavItem href='/about/' text='About' />
+        <NavItem href='/projects' text='Projects' />
+        <NavItem href='/contact' text='Contact' />
       </nav>
     </header>
   )

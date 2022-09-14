@@ -5,32 +5,25 @@ type TCardProps = {
   link: string
   id: string
   title: string
-  category: string
 }
 
 const Card = (props: TCardProps) => {
   return (
-    <div>
-      <div>
-        <Link href={props.link}>
-          <a>
-            <div>
-              <Image
-                priority
-                src={`/images/${props.id}-screenshot.png`}
-                width={1536}
-                height={2048}
-                alt='project screenshot'
-              />
-            </div>
-            <div>
-              <div>{props.title}</div>
-              <div>{props.category}</div>
-            </div>
-          </a>
-        </Link>
-      </div>
-    </div>
+    <article className='mb-12'>
+      <Link href={props.link}>
+        <a>
+          <div className='rounded-xl overflow-hidden' style={{ fontSize: 0 }}>
+            <Image
+              src={`/images/${props.id}-screenshot.png`}
+              width={2560}
+              height={1600}
+              alt='project screenshot'
+            />
+          </div>
+          <h3 className='mt-4'>{props.title}</h3>
+        </a>
+      </Link>
+    </article>
   )
 }
 
