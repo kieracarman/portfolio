@@ -10,7 +10,10 @@ module.exports = {
       white: '#ffffff',
       blush: '#ffeaee',
       accent: '#75e3f0',
-      cta: '#f2a6c6'
+      cta: '#f2a6c6',
+      alert: '#F25757',
+      warn: '#F7D08A',
+      success: '#00A878'
     },
     extend: {
       fontFamily: {
