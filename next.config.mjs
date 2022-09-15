@@ -1,4 +1,4 @@
-import { env } from './src/env/server.mjs'
+import { withContentlayer } from 'next-contentlayer'
 
 /**
  * Don't be scared of the generics here.
@@ -12,15 +12,17 @@ function defineNextConfig(config) {
   return config
 }
 
-export default defineNextConfig({
-  reactStrictMode: true,
-  swcMinify: true,
-  // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en'
-  },
-  images: {
-    domains: ['www.kieracarman.com']
-  }
-})
+export default withContentlayer(
+  defineNextConfig({
+    reactStrictMode: true,
+    swcMinify: true,
+    // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
+    i18n: {
+      locales: ['en'],
+      defaultLocale: 'en'
+    },
+    images: {
+      domains: ['www.kieracarman.com']
+    }
+  })
+)
