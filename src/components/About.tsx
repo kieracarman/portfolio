@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id='about'
-      className='prose-lg mb-12 px-4 sm:mx-auto sm:max-w-2xl md:py-12'
+      className='prose-xl mb-12 px-4 sm:mx-auto sm:max-w-2xl md:py-12 lg:mb-8'
     >
       <h2 className='mt-6 mb-4 font-extrabold text-accent sm:text-4xl md:text-6xl'>
         Hi, my name is Kiera!
@@ -14,10 +14,11 @@ const About = () => {
         code and breaking down big problems into bite-sized chunks.
       </p>
       <p>
-        I think primarily in Typescript, SQL, React, and Next.js but have
+        I think primarily in Typescript, React.js, Next.js, and SQL but have
         experience with many languages and platforms, and I&apos;m currently
-        floating around between lots of different freelance and personal
-        projects.
+        looking for a full-time developer position!
+        {/* floating around between lots of different freelance and personal
+        projects. */}
         {/* I am
         also passionate about DevOps, automation, and mixing artistry with code. */}
       </p>
