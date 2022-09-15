@@ -1,14 +1,25 @@
+import { type Project } from 'contentlayer/generated'
 import Card from '@components/Card'
 
-import projects from '@content/projects.json'
+type ProjectsProps = {
+  projects: Project[]
+}
 
-const Projects = () => {
+const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <section className='prose-lg p-4 bg-background-light'>
-      <h2 className='mt-4 text-blush font-semibold'>Projects</h2>
-      <div>
-        {projects.map(({ id, title }, index) => (
-          <Card id={id} link={`/${id}`} title={title} key={index} />
+    <section
+      id='projects'
+      className='prose-lg bg-background-light px-4 pt-4 lg:py-12 lg:px-8'
+    >
+      <h2 className='mt-4 mb-4 font-semibold text-white md:text-4xl'>
+        Projects
+      </h2>
+      <h3 className='mb-8 lg:mb-12'>
+        Check out some of the projects I&apos;ve built!
+      </h3>
+      <div className='sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3'>
+        {projects.map((project, index) => (
+          <Card key={index} project={project} />
         ))}
       </div>
     </section>

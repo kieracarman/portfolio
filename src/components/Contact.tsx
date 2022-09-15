@@ -18,42 +18,44 @@ const Contact = () => {
   }
 
   return (
-    <section className='prose-lg px-4'>
-      <h2 className='mt-8 mb-2 text-accent font-semibold'>Contact Me</h2>
+    <section id='contact' className='prose-lg mx-auto max-w-xl px-4'>
+      <h2 className='mt-8 mb-2 font-semibold text-accent lg:mt-12 lg:text-4xl'>
+        Contact Me
+      </h2>
       <form method='post' onSubmit={handleSubmit}>
         <h4 className='mt-0 mb-6 px-1'>Have a question? Send me a message!</h4>
         <p>
-          <label htmlFor='name' className='block mb-1 pl-1'>
+          <label htmlFor='name' className='mb-1 block pl-1'>
             Name
           </label>
           <input
             type='text'
             name='name'
-            className='rounded-xl w-full transition duration-200 bg-background-light border border-background-light px-3 py-1 focus:outline-none focus:border-accent'
+            className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
         <p>
-          <label htmlFor='email' className='block mb-1 pl-1'>
+          <label htmlFor='email' className='mb-1 block pl-1'>
             Email
           </label>
           <input
             type='email'
             name='email'
-            className='rounded-xl w-full transition duration-200 bg-background-light border border-background-light px-3 py-1 focus:outline-none focus:border-accent'
+            className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
         <p>
-          <label htmlFor='message' className='block mb-1 pl-1'>
+          <label htmlFor='message' className='mb-1 block pl-1'>
             Message
           </label>
           <textarea
             name='message'
-            className='rounded-xl resize-none w-full transition duration-200 bg-background-light border border-background-light px-3 py-1 focus:outline-none focus:border-accent'
+            className='w-full resize-none rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
         <p className='text-center'>
           {!submitted ? (
-            <button className='px-8 py-2 text-center transition duration-200 border rounded-xl focus:outline-none bg-background-light  border-background-light hover:text-accent hover:border-accent'>
+            <button className='rounded-xl border border-background-light bg-background-light px-8 py-2 text-center transition duration-200  hover:border-accent hover:text-accent focus:outline-none'>
               Submit
             </button>
           ) : (

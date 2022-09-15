@@ -54,9 +54,9 @@ const AnimatedBars = () => {
 
   return (
     <div className='flex items-center gap-[3px]'>
-      <span className='w-1 h-1 bg-accent opacity-75' id='bar1' />
-      <span className='w-1 h-1 bg-accent' id='bar2' />
-      <span className='w-1 h-3 bg-accent opacity-80' id='bar3' />
+      <span className='h-1 w-1 bg-accent opacity-75' id='bar1' />
+      <span className='h-1 w-1 bg-accent' id='bar2' />
+      <span className='h-3 w-1 bg-accent opacity-80' id='bar3' />
     </div>
   )
 }
@@ -73,14 +73,19 @@ const NowPlaying = () => {
         />
       </svg>
       {data?.songUrl ? <AnimatedBars /> : ''}
-      <div className='font-bold text-accent opacity-80 hover:opacity-100 transition duration-200'>
+      <div className='font-bold text-accent'>
         {data?.songUrl ? (
-          <a href={data.songUrl} target='_blank' rel='noopener noreferrer'>
+          <a
+            className='opacity-80 transition duration-200 hover:opacity-100'
+            href={data.songUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             {data.title}
             <span> - {data.artist}</span>
           </a>
         ) : (
-          <p>
+          <p className='opacity-80'>
             Not Playing<span> - Spotify</span>
           </p>
         )}

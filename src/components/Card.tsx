@@ -1,26 +1,28 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Project } from 'contentlayer/generated'
+import Browser from './Browser'
 
-type TCardProps = {
-  link: string
-  id: string
-  title: string
+type CardProps = {
+  project: Project
 }
 
-const Card = (props: TCardProps) => {
+const Card = ({ project }: CardProps) => {
   return (
-    <article className='mb-12'>
-      <Link href={props.link}>
+    <article className='pb-4'>
+      <Link href={`/${project.slug}`}>
         <a>
-          <div className='rounded-xl overflow-hidden' style={{ fontSize: 0 }}>
-            <Image
-              src={`/images/${props.id}-screenshot.png`}
-              width={2560}
-              height={1600}
-              alt='project screenshot'
-            />
-          </div>
-          <h3 className='mt-4'>{props.title}</h3>
+          <Browser>
+            <div style={{ fontSize: 0 }}>
+              <Image
+                src={`/images/${project.slug}-screenshot.png`}
+                width={2560}
+                height={1600}
+                alt='project screenshot'
+              />
+            </div>
+          </Browser>
+          <h3 className='mt-4'>{project.title}</h3>
         </a>
       </Link>
     </article>

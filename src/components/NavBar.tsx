@@ -11,7 +11,7 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
         <span>{text}</span>
       ) : (
         <Link href={href}>
-          <a className='transition duration-200 opacity-40 hover:opacity-100'>
+          <a className='opacity-40 transition duration-200 hover:opacity-100'>
             {text}
           </a>
         </Link>
@@ -22,19 +22,19 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
 
 const NavBar = () => {
   return (
-    <header className='p-4 flex items-center justify-between'>
-      <div className='uppercase font-medium text-xl text-accent transition duration-200 opacity-40 hover:opacity-100'>
+    <header className='flex items-center justify-between p-4 md:p-6 lg:p-8'>
+      <div className='text-xl font-medium uppercase text-accent opacity-40 transition duration-200 hover:opacity-100'>
         <Link href='/'>
           <a>Kiera Carman</a>
         </Link>
       </div>
 
       {/* desktop nav links */}
-      <nav className='hidden md:flex text-accent'>
+      <nav className='hidden text-accent md:flex md:gap-6'>
         <NavItem href='/' text='Home' />
-        <NavItem href='/about/' text='About' />
-        <NavItem href='/projects' text='Projects' />
-        <NavItem href='/contact' text='Contact' />
+        <NavItem href='/#about' text='About' />
+        <NavItem href='/#projects' text='Projects' />
+        <NavItem href='/#contact' text='Contact' />
       </nav>
     </header>
   )
