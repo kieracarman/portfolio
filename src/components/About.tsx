@@ -33,24 +33,21 @@ const About = () => {
         Outside of coding, I love building things with my hands, cooking at
         home, and DJing killer parties when we&lsquo;re not in a pandemic.
       </p> */}
-      <div className='mt-8 flex justify-center gap-4 sm:justify-start'>
+      <motion.div
+        variants={slideUp}
+        className='mt-8 flex justify-center gap-4 sm:justify-start'
+      >
         <Link href='https://github.com/kieracarman'>
-          <motion.a
-            variants={slideUp}
-            className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background transition duration-200  hover:border-white hover:text-white focus:outline-none'
-          >
+          <a className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background transition duration-200  hover:border-white hover:text-white focus:outline-none'>
             Github
-          </motion.a>
+          </a>
         </Link>
         <Link href='https://linkedin.com/in/kiera-carman'>
-          <motion.a
-            variants={slideUp}
-            className='block rounded-lg border border-cta px-8 py-2 text-center text-cta transition duration-200 hover:border-white hover:text-white focus:outline-none'
-          >
+          <a className='block rounded-lg border border-cta px-8 py-2 text-center text-cta transition duration-200 hover:border-white hover:text-white focus:outline-none'>
             Linkedin
-          </motion.a>
+          </a>
         </Link>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
