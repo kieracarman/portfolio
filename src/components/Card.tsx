@@ -12,7 +12,12 @@ type CardProps = {
 
 const Card = ({ project }: CardProps) => {
   return (
-    <motion.article variants={slideUp} className='pb-4'>
+    <motion.article
+      variants={slideUp}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className='pb-4'
+    >
       <Link href={`/${project.slug}`} scroll={false}>
         <a>
           <Browser>
