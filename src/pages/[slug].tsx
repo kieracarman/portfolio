@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { motion } from 'framer-motion'
+import { NextSeo } from 'next-seo'
 
 import { allProjects, type Project } from 'contentlayer/generated'
 import Layout from '@components/Layout'
@@ -37,9 +38,12 @@ const Project = ({
 
   return (
     <>
-      <Head>
-        <title>{project.title}</title>
-      </Head>
+      <NextSeo
+        title={project.title}
+        description={project.subtitle}
+        canonical={`https://www.kieracarman.com/${project.slug}/`}
+      />
+
       <Layout>
         <motion.article
           variants={stagger}

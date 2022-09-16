@@ -1,4 +1,5 @@
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next'
+import { NextSeo } from 'next-seo'
 
 import { allProjects, type Project } from 'contentlayer/generated'
 import Layout from '@components/Layout'
@@ -18,11 +19,19 @@ export const getStaticProps: GetStaticProps<{
 
 const Home = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <Layout>
-      <About />
-      <Projects projects={projects} />
-      <Contact />
-    </Layout>
+    <>
+      <NextSeo
+        title='Software Developer'
+        description='Personal portfolio. Check out my projects or get in touch!'
+        canonical='https://www.kieracarman.com/'
+      />
+
+      <Layout>
+        <About />
+        <Projects projects={projects} />
+        <Contact />
+      </Layout>
+    </>
   )
 }
 
