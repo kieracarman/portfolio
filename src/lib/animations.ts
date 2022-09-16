@@ -50,7 +50,7 @@ export const slideUpDown = {
     opacity: 0,
     y: 60,
     transition: {
-      duration: 0.2,
+      duration: 0.15,
       ease: 'easeIn'
     }
   }
