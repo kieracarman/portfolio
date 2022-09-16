@@ -79,7 +79,7 @@ const Project = ({
         </motion.article>
         <motion.div variants={slideUpDown} className='flex justify-center'>
           <Link href='/' scroll={false}>
-            <a className='text-accent no-underline opacity-80 transition duration-200 hover:opacity-100'>
+            <a className='text-accent no-underline opacity-80 transition duration-150 hover:opacity-100'>
               ← back to home
             </a>
           </Link>

@@ -76,7 +76,7 @@ const NowPlaying = () => {
       <div className='font-bold text-accent'>
         {data?.songUrl ? (
           <a
-            className='opacity-80 transition duration-200 hover:opacity-100'
+            className='opacity-80 transition duration-150 hover:opacity-100'
             href={data.songUrl}
             target='_blank'
             rel='noopener noreferrer'
