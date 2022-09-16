@@ -51,6 +51,7 @@ const Project = ({
                 height={1600}
                 alt='project screenshot'
                 className='mx-auto'
+                priority
               />
             </Browser>
           </div>

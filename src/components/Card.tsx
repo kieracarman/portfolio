@@ -19,6 +19,7 @@ const Card = ({ project }: CardProps) => {
                 width={2560}
                 height={1600}
                 alt='project screenshot'
+                priority
               />
             </div>
           </Browser>
