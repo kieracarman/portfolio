@@ -1,3 +1,4 @@
+import Container from 'next/app'
 import '@styles/globals.css'
 import type { AppType } from 'next/dist/shared/lib/utils'
 import { useRouter } from 'next/router'
@@ -14,9 +15,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       exitBeforeEnter
       onExitComplete={() => window.scrollTo(0, 0)}
     >
-      <DefaultSeo {...seo}>
-        <Component {...pageProps} key={router.asPath} />
-      </DefaultSeo>
+      <DefaultSeo {...seo} />
+      <Component {...pageProps} key={router.asPath} />
     </AnimatePresence>
   )
 }
