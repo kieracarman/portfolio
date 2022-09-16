@@ -3,11 +3,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import { motion } from 'framer-motion'
 
 import { allProjects, type Project } from 'contentlayer/generated'
 import Layout from '@components/Layout'
 import Buttons from '@components/Buttons'
 import Browser from '@components/Browser'
+import { slideUp, slideUpDown, stagger } from '@lib/animations'
 
 export const getStaticPaths = () => {
   return {
@@ -39,8 +41,12 @@ const Project = ({
         <title>{project.title}</title>
       </Head>
       <Layout>
-        <article className='mb-4 text-white 2xl:mt-8 2xl:grid 2xl:grid-cols-2 2xl:items-center 2xl:gap-8'>
-          <div
+        <motion.article
+          variants={stagger}
+          className='mb-4 text-white 2xl:mt-8 2xl:grid 2xl:grid-cols-2 2xl:items-center 2xl:gap-8'
+        >
+          <motion.div
+            variants={slideUp}
             className='mx-auto px-4 md:max-w-3xl 2xl:mr-0'
             style={{ fontSize: 0 }}
           >
@@ -54,21 +60,30 @@ const Project = ({
                 priority
               />
             </Browser>
-          </div>
-          <section className='prose-xl mx-auto max-w-2xl px-4 2xl:ml-0'>
-            <h2 className='mt-4 mb-2 text-white'>{project.title}</h2>
-            <h4 className='mb-4 text-white opacity-80'>{project.subtitle}</h4>
+          </motion.div>
+          <motion.section className='prose-xl mx-auto max-w-2xl px-4 2xl:ml-0'>
+            <motion.h2 variants={slideUp} className='mt-4 mb-2 text-white'>
+              {project.title}
+            </motion.h2>
+            <motion.h4
+              variants={slideUp}
+              className='mb-4 text-white opacity-80'
+            >
+              {project.subtitle}
+            </motion.h4>
             <Buttons demo={project.demo} code={project.code} />
-            <MDXContent />
-          </section>
-        </article>
-        <div className='flex justify-center'>
-          <Link href='/'>
+            <motion.div variants={slideUp}>
+              <MDXContent />
+            </motion.div>
+          </motion.section>
+        </motion.article>
+        <motion.div variants={slideUpDown} className='flex justify-center'>
+          <Link href='/' scroll={false}>
             <a className='text-accent no-underline opacity-80 transition duration-200 hover:opacity-100'>
               ← back to home
             </a>
           </Link>
-        </div>
+        </motion.div>
       </Layout>
     </>
   )

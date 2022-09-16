@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
 import { Project } from 'contentlayer/generated'
 import Browser from './Browser'
+import { slideUp } from '@lib/animations'
 
 type CardProps = {
   project: Project
@@ -9,8 +12,8 @@ type CardProps = {
 
 const Card = ({ project }: CardProps) => {
   return (
-    <article className='pb-4'>
-      <Link href={`/${project.slug}`}>
+    <motion.article variants={slideUp} className='pb-4'>
+      <Link href={`/${project.slug}`} scroll={false}>
         <a>
           <Browser>
             <div style={{ fontSize: 0 }}>
@@ -26,7 +29,7 @@ const Card = ({ project }: CardProps) => {
           <h3 className='mt-4'>{project.title}</h3>
         </a>
       </Link>
-    </article>
+    </motion.article>
   )
 }
 

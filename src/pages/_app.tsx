@@ -1,12 +1,18 @@
 import '@styles/globals.css'
 import type { AppType } from 'next/dist/shared/lib/utils'
-import TransitionUp from '@components/TransitionUp'
+import { useRouter } from 'next/router'
+import { AnimatePresence } from 'framer-motion'
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const router = useRouter()
+
   return (
-    <TransitionUp>
-      <Component {...pageProps} />
-    </TransitionUp>
+    <AnimatePresence
+      exitBeforeEnter
+      onExitComplete={() => window.scrollTo(0, 0)}
+    >
+      <Component {...pageProps} key={router.asPath} />
+    </AnimatePresence>
   )
 }
 

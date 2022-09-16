@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import { FiCloud, FiCode, FiLock } from 'react-icons/fi'
+import { motion } from 'framer-motion'
+
+import { slideUp } from '@lib/animations'
 
 type ButtonsProps = {
   demo?: string
@@ -13,7 +16,7 @@ const Buttons = ({ demo, code }: ButtonsProps) => {
     'flex cursor-default line-through decoration-2 gap-2 rounded-lg items-center bg-background-light px-3 py-1 text-white text-opacity-50'
 
   return (
-    <div className='mb-12 flex gap-2'>
+    <motion.div variants={slideUp} className='mb-12 flex gap-2'>
       {code ? (
         <Link href={code}>
           <a className={activeClass}>
@@ -36,7 +39,7 @@ const Buttons = ({ demo, code }: ButtonsProps) => {
           <FiLock /> Demo
         </span>
       )}
-    </div>
+    </motion.div>
   )
 }
 

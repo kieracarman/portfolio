@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 
 import NavBar from '@components/NavBar'
 import Footer from '@components/Footer'
-import TransitionUp from '@components/TransitionUp'
-import TransitionDown from '@components/TransitionDown'
+import { stagger } from '@lib/animations'
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -14,13 +14,16 @@ const Layout = ({ children }: PropsWithChildren) => {
       </Head>
 
       <div>
-        <TransitionUp>
-          <TransitionDown>
-            <NavBar />
-          </TransitionDown>
-          <main>{children}</main>
-          <Footer />
-        </TransitionUp>
+        <NavBar />
+        <motion.main
+          variants={stagger}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+        >
+          {children}
+        </motion.main>
+        <Footer />
       </div>
     </>
   )

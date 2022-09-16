@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { motion } from 'framer-motion'
+
+import { slideUp } from '@lib/animations'
 
 type FormData = {
   name: string
@@ -20,7 +23,11 @@ const Contact = () => {
   })
 
   return (
-    <section id='contact' className='prose-lg mx-auto max-w-xl px-4'>
+    <motion.section
+      variants={slideUp}
+      id='contact'
+      className='prose-lg mx-auto max-w-xl px-4'
+    >
       <h2 className='mt-8 mb-2 font-semibold text-accent lg:mt-12 lg:text-4xl'>
         Contact Me
       </h2>
@@ -64,7 +71,7 @@ const Contact = () => {
           )}
         </p>
       </form>
-    </section>
+    </motion.section>
   )
 }
 

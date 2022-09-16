@@ -1,27 +1,35 @@
 import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
 import NowPlaying from '@components/NowPlaying'
+import { slideUpDown } from '@lib/animations'
 
 const Footer = () => {
   return (
-    <footer className='p-4'>
+    <motion.footer
+      variants={slideUpDown}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      className='p-4'
+    >
       <NowPlaying />
-      <div className='text-2xl flex justify-center gap-4 mb-2 text-accent'>
+      <div className='mb-2 flex justify-center gap-4 text-2xl text-accent'>
         <a
           href='https://twitter.com/awildkiera'
-          className='opacity-80 hover:opacity-100 transition duration-200'
+          className='opacity-80 transition duration-200 hover:opacity-100'
         >
           <FiTwitter />
         </a>
         <a
           href='https://github.com/kieracarman'
-          className='opacity-80 hover:opacity-100 transition duration-200'
+          className='opacity-80 transition duration-200 hover:opacity-100'
         >
           <FiGithub />
         </a>
         <a
           href='https://linkedin.com/in/kiera-carman'
-          className='opacity-80 hover:opacity-100 transition duration-200'
+          className='opacity-80 transition duration-200 hover:opacity-100'
         >
           <FiLinkedin />
         </a>
@@ -29,7 +37,7 @@ const Footer = () => {
       <div className='text-center text-accent opacity-50'>
         © {new Date().getFullYear()} Kiera Carman
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 
