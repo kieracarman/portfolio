@@ -18,18 +18,21 @@ const Footer = () => {
         <a
           href='https://twitter.com/awildkiera'
           className='opacity-80 transition duration-200 hover:opacity-100'
+          aria-label='twitter'
         >
           <FiTwitter />
         </a>
         <a
           href='https://github.com/kieracarman'
           className='opacity-80 transition duration-200 hover:opacity-100'
+          aria-label='github'
         >
           <FiGithub />
         </a>
         <a
           href='https://linkedin.com/in/kiera-carman'
           className='opacity-80 transition duration-200 hover:opacity-100'
+          aria-label='linkedin'
         >
           <FiLinkedin />
         </a>

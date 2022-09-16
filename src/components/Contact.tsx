@@ -31,13 +31,14 @@ const Contact = () => {
       <h2 className='mt-8 mb-2 font-semibold text-accent lg:mt-12 lg:text-4xl'>
         Contact Me
       </h2>
+      <h4 className='mt-0 mb-6 px-1'>Have a question? Send me a message!</h4>
       <form method='post' onSubmit={onSubmit}>
-        <h4 className='mt-0 mb-6 px-1'>Have a question? Send me a message!</h4>
         <p>
           <label htmlFor='name' className='mb-1 block pl-1'>
             Name
           </label>
           <input
+            id='name'
             {...register('name')}
             className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
@@ -47,6 +48,7 @@ const Contact = () => {
             Email
           </label>
           <input
+            id='email'
             type='email'
             {...register('email')}
             className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
@@ -57,6 +59,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
+            id='message'
             {...register('message')}
             className='w-full resize-none rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
