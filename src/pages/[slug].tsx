@@ -1,5 +1,4 @@
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMDXComponent } from 'next-contentlayer/hooks'

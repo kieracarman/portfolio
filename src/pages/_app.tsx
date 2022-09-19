@@ -1,4 +1,3 @@
-import Container from 'next/app'
 import '@styles/globals.css'
 import type { AppType } from 'next/dist/shared/lib/utils'
 import { useRouter } from 'next/router'
