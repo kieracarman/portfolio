@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.kieracarman.com
+
+# Sitemaps
+Sitemap: https://www.kieracarman.com/sitemap.xml
