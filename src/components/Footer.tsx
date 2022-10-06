@@ -38,7 +38,8 @@ const Footer = () => {
         </a>
       </div>
       <div className='text-center text-accent opacity-50'>
-        © {new Date().getFullYear()} Kiera Carman
+        © {new Date().getFullYear()} Kiera Carman - Built with Next.js, MDX, and
+        Framer Motion ❤️
       </div>
     </motion.footer>
   )
