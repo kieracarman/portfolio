@@ -39,7 +39,7 @@ const Contact = () => {
           </label>
           <input
             id='name'
-            {...register('name')}
+            {...(register('name'), { required: true })}
             className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
@@ -50,7 +50,7 @@ const Contact = () => {
           <input
             id='email'
             type='email'
-            {...register('email')}
+            {...(register('email'), { required: true })}
             className='w-full rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
@@ -60,7 +60,7 @@ const Contact = () => {
           </label>
           <textarea
             id='message'
-            {...register('message')}
+            {...(register('message'), { required: true })}
             className='w-full resize-none rounded-xl border border-background-light bg-background-light px-3 py-1 transition duration-200 focus:border-accent focus:outline-none'
           />
         </p>
