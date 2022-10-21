@@ -23,7 +23,7 @@ const Projects = ({ projects }: ProjectsProps) => {
           Projects
         </motion.h2>
         <motion.h3 variants={slideUp} className='mb-8 lg:mb-12'>
-          Check out some of the projects I&apos;ve built!
+          Check out some of my latest projects!
         </motion.h3>
         <motion.div
           variants={stagger}

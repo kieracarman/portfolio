@@ -4,8 +4,26 @@ subtitle: 'A web app management platform for a university sound recording techno
 code: 'https://github.com/kieracarman/srt-studio-manager'
 ---
 
-This web app is one of my work-in-progress projects.
+## Concept
 
-I developed this concept while chatting with my dad, who manages sound recording facilities at a university. He expressed a need for a management platform, to assist with his responsibilities including keeping track of physical and non-physical assets, studio bookings, and managing support requests when things break or go missing.
+I developed this idea while chatting with my dad, who manages sound recording facilities at a university. He expressed a need for a management platform, to assist with his responsibilities including keeping track of physical and non-physical assets, studio bookings, and managing support requests when things break or go missing.
 
-The scope of this project includes multiple RESTful APIs to manage all of the different data involved, as well as integration with the university's Active Directory to enable students and faculty to log in with their SSO .edu email address and password.
+## Build process
+
+### Initial development
+
+I started by building a web application using Node.js, Express, and MongoDB on the backend and React on the frontend. At the time, I didn't really have the tools to make informed decisions about which technologies to use, I just started using the tech that looked interesting to me. I rolled my own authentication using Passport.js and JWTs and built multiple RESTful APIs on the backend to handle the data. I used MongoDB because it seemed shiny and new and a lot of people online seemed to like it.
+
+### Improvements
+
+As I worked on the project over time, and as I learned more and more from other projects, I decided to rebuild most of the app with better technical decisions to make the app more rugged and easy to maintain.
+
+> Around this time I discovered the [T3 stack](https://init.tips) from Theo at [Ping Labs](https://ping.gg) and it absolutely blew my mind. It introduced me to a lot of new concepts and ways of thinking about writing applications. I highly recommend checking out T3 if you haven't already! Most of the informed decisions I made while rewriting this app came from what I've learned from the T3 stack project.
+
+On the backend, the shininess of Mongo had worn off quickly and I realized I was working with highly relational data. I switched to a MySQL database using [Prisma](https://prisma.io) as an ORM, the developer experience using Prisma has been incredible and on a smaller project like this one I haven't had any issues with speed. The typesafety benefits _greatly_ outweighed any potential speed impact.
+
+Along with adopting Prisma, I also integrated [tRPC](https://trpc.io) for my data fetching. After dabbling in React/TanStack query in some smaller side projects, tRPC was an easy choice, and also came with fantastic typesafety benefits like Prisma.
+
+Following this theme, I also integrated [NextAuth](https://next-auth.js.org) and [TailwindCSS](https://tailwindcss.com). With NextAuth I was easily able to set up an auth flow that interfaces with the university's own Azure Active Directory service for easy, seamless auth, allowing staff and students to use the same .edu email address they use for other services.
+
+This stack has made me feel so much more productive, and it feels like the perfect fit for this use case.

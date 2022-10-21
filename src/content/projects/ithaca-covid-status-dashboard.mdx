@@ -5,8 +5,12 @@ demo: 'https://ithaca-covid-status.vercel.app'
 code: 'https://github.com/kieracarman/ithaca-covid-status'
 ---
 
-This minimalistic app fetches covid data from the Tompkins County Health Department and parses out the most important numbers to show the general status of covid risk in the area.
+## Concept
 
-I created this app because I felt like the health department's website was too complicated, and I wanted a super quick overview of the community transmission and case data to guage infection risk in real time.
+This minimalistic app fetches covid data from the Tompkins County Health Department and parses out the most important numbers to show the general status of covid risk in the area. I created this app because I felt like the health department's website was too complicated, and I wanted a super quick overview of the community transmission and case data to guage infection risk in real time.
 
-I wrote an API route that uses Axios to fetch CSV data from a public Google Sheet updated by the health department, then return the important data as JSON which is then displayed on the page. This project utilizes the server-side rendering built in to Next.js to serve fully rendered content to the client.
+## Build process
+
+I started by writing an API route that uses Axios to fetch CSV data from a public Google Sheet updated by the health department. I figured out how to parse and process that data, doing some math to generate the important numbers based on the data returned from the spreadsheet.
+
+Once that data is processed, I return it as JSON and Next.js renders the page with some conditional styles to color-code the numbers. This project utilizes the server-side rendering built in to Next.js to serve pure, fully rendered HTML to the client.

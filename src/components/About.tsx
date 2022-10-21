@@ -22,8 +22,8 @@ const About = () => {
       </motion.p>
       <motion.p variants={slideUp}>
         I think primarily in Typescript, React.js, Next.js, and SQL but have
-        experience with many languages and platforms, and I&apos;m currently
-        looking for a full-time developer position!
+        experience with many languages and platforms. I&apos;m currently looking
+        for a full-time developer position!
         {/* floating around between lots of different freelance and personal
         projects. */}
         {/* I am
@@ -38,12 +38,12 @@ const About = () => {
         className='mt-8 flex justify-center gap-4 sm:justify-start'
       >
         <Link href='https://github.com/kieracarman'>
-          <a className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background transition duration-200  hover:border-white hover:text-white focus:outline-none'>
+          <a className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background no-underline transition duration-200  hover:border-white hover:text-white focus:outline-none'>
             Github
           </a>
         </Link>
         <Link href='https://linkedin.com/in/kiera-carman'>
-          <a className='block rounded-lg border border-cta px-8 py-2 text-center text-cta transition duration-200 hover:border-white hover:text-white focus:outline-none'>
+          <a className='block rounded-lg border border-cta px-8 py-2 text-center text-cta no-underline transition duration-200 hover:border-white hover:text-white focus:outline-none'>
             Linkedin
           </a>
         </Link>

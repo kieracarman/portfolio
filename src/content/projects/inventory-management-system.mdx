@@ -4,8 +4,18 @@ subtitle: 'A simple inventory management web app to keep track of ingredients in
 code: 'https://github.com/kieracarman/donut-ims'
 ---
 
+## Concept
+
 I designed and implemented this app to solve a logistics issue for a small local donut shop.
 
 The kitchen kept running out of important ingredients when they needed them most, and had a hard time remembering when to reorder commonly-used ingredients.
 
-The web application I designed is responsive and 100% mobile compatible. It allows staff members to take inventory snapshots so they always know what is on the shelves, and automates the creation of an order sheet when item stock drops below a preset threshold.
+## Build process
+
+This project taught me to build REST APIs. At the time, I was absorbing as much as I could about modern webapp development and adapting patterns learned from coding tutorials to solve problems in my own life.
+
+The app is responsive and 100% mobile compatible. This was a project requirement because we needed it to run on an iPad in the store, it allows staff members to take inventory snapshots so they always know what is on the shelves, and automates the creation of an order sheet when item stock drops below a preset threshold.
+
+I built this app using Node.js, Express, and MongoDB with Mongoose on the backend. I learned how to create endpoints in Express and respond with data from the Mongo database, and then I learned how to test endpoints using Postman.
+
+I used React on the frontend, I had just learned how to use create-react-app and I cobbled together a UI from a mix of Bootstrap components and custom CSS. I managed to get auth working with Passport.js and JWTs, and data fetching using Axios and Redux. Looking back at the code now, it's very messy and there is a lot I would change, but it works! When I finished this project, it felt like a huge accomplishment to have a working data flow and authentication. It also solved our logistics problems so well that I didn't mind the simplistic interface.
