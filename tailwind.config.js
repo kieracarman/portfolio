@@ -18,6 +18,34 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans]
+      },
+      typography: {
+        xl: {
+          css: {
+            a: {
+              textDecoration: 'underline',
+              textDecorationThickness: '1px'
+            },
+            h2: {
+              fontWeight: '600'
+            },
+            h3: {
+              fontWeight: '500'
+            },
+            blockquote: {
+              backgroundColor: '#1c3254',
+              borderRadius: '1rem',
+              paddingLeft: '2rem',
+              paddingRight: '2rem',
+              paddingTop: '0.5rem',
+              paddingBottom: '0.5rem',
+              outline: '3px',
+              outlineColor: '#1c3254',
+              outlineStyle: 'dashed',
+              outlineOffset: '4px'
+            }
+          }
+        }
       }
     }
   },

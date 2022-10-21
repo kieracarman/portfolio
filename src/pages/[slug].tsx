@@ -44,13 +44,10 @@ const Project = ({
       />
 
       <Layout>
-        <motion.article
-          variants={stagger}
-          className='mb-4 text-white 2xl:mt-8 2xl:grid 2xl:grid-cols-2 2xl:items-center 2xl:gap-8'
-        >
+        <motion.article variants={stagger} className='mb-4 text-white 2xl:mt-8'>
           <motion.div
             variants={slideUp}
-            className='mx-auto px-4 md:max-w-3xl 2xl:mr-0'
+            className='mx-auto px-4 md:max-w-6xl'
             style={{ fontSize: 0 }}
           >
             <Browser>
@@ -64,8 +61,8 @@ const Project = ({
               />
             </Browser>
           </motion.div>
-          <motion.section className='prose-xl mx-auto max-w-2xl px-4 2xl:ml-0'>
-            <motion.h2 variants={slideUp} className='mt-4 mb-2 text-white'>
+          <motion.section className='prose-xl mx-auto max-w-2xl px-4'>
+            <motion.h2 variants={slideUp} className='mt-8 mb-2 text-white'>
               {project.title}
             </motion.h2>
             <motion.h4
