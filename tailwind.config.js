@@ -38,11 +38,7 @@ module.exports = {
               paddingLeft: '2rem',
               paddingRight: '2rem',
               paddingTop: '0.5rem',
-              paddingBottom: '0.5rem',
-              outline: '3px',
-              outlineColor: '#1c3254',
-              outlineStyle: 'dashed',
-              outlineOffset: '4px'
+              paddingBottom: '0.5rem'
             }
           }
         }
