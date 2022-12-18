@@ -13,10 +13,11 @@ const NavItem = ({ href, text }: { href: string; text: string }) => {
       {isActive ? (
         <span>{text}</span>
       ) : (
-        <Link href={href}>
-          <a className='opacity-40 transition duration-200 hover:opacity-100'>
-            {text}
-          </a>
+        <Link
+          href={href}
+          className='opacity-40 transition duration-200 hover:opacity-100'
+        >
+          {text}
         </Link>
       )}
     </div>
@@ -34,7 +35,7 @@ const NavBar = () => {
     >
       <div className='text-xl font-medium uppercase text-accent opacity-40 transition duration-200 hover:opacity-100'>
         <Link href='/' scroll={false}>
-          <a>Kiera Carman</a>
+          Kiera Carman
         </Link>
       </div>
 

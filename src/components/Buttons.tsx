@@ -18,10 +18,8 @@ const Buttons = ({ demo, code }: ButtonsProps) => {
   return (
     <motion.div variants={slideUp} className='mb-12 flex gap-2'>
       {code ? (
-        <Link href={code}>
-          <a className={activeClass}>
-            <FiCode /> Code
-          </a>
+        <Link href={code} className={activeClass}>
+          <FiCode /> Code
         </Link>
       ) : (
         <span className={inactiveClass}>
@@ -29,10 +27,8 @@ const Buttons = ({ demo, code }: ButtonsProps) => {
         </span>
       )}
       {demo ? (
-        <Link href={demo}>
-          <a className={activeClass}>
-            <FiCloud /> Demo
-          </a>
+        <Link href={demo} className={activeClass}>
+          <FiCloud /> Demo
         </Link>
       ) : (
         <span className={inactiveClass}>

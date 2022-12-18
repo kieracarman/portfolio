@@ -37,15 +37,17 @@ const About = () => {
         variants={slideUp}
         className='mt-8 flex justify-center gap-4 sm:justify-start'
       >
-        <Link href='https://github.com/kieracarman'>
-          <a className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background no-underline transition duration-200  hover:border-white hover:text-white focus:outline-none'>
-            Github
-          </a>
+        <Link
+          href='https://github.com/kieracarman'
+          className='block rounded-lg border border-cta bg-cta px-8 py-2 text-center font-bold text-background no-underline transition duration-200  hover:border-white hover:text-white focus:outline-none'
+        >
+          Github
         </Link>
-        <Link href='https://linkedin.com/in/kiera-carman'>
-          <a className='block rounded-lg border border-cta px-8 py-2 text-center text-cta no-underline transition duration-200 hover:border-white hover:text-white focus:outline-none'>
-            Linkedin
-          </a>
+        <Link
+          href='https://linkedin.com/in/kiera-carman'
+          className='block rounded-lg border border-cta px-8 py-2 text-center text-cta no-underline transition duration-200 hover:border-white hover:text-white focus:outline-none'
+        >
+          Linkedin
         </Link>
       </motion.div>
     </motion.section>

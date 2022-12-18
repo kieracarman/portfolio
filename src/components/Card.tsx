@@ -19,20 +19,18 @@ const Card = ({ project }: CardProps) => {
       className='pb-4'
     >
       <Link href={`/${project.slug}`} scroll={false}>
-        <a>
-          <Browser>
-            <div style={{ fontSize: 0 }}>
-              <Image
-                src={`/images/${project.slug}-screenshot.png`}
-                width={2560}
-                height={1600}
-                alt='project screenshot'
-                priority
-              />
-            </div>
-          </Browser>
-          <h3 className='mt-4'>{project.title}</h3>
-        </a>
+        <Browser>
+          <div style={{ fontSize: 0 }}>
+            <Image
+              src={`/images/${project.slug}-screenshot.png`}
+              width={2560}
+              height={1600}
+              alt='project screenshot'
+              priority
+            />
+          </div>
+        </Browser>
+        <h3 className='mt-4'>{project.title}</h3>
       </Link>
     </motion.article>
   )
