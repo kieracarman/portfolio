@@ -1,23 +1,24 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      background: '#021634',
-      'background-light': '#1c3254',
-      white: '#ffffff',
-      blush: '#ffeaee',
-      accent: '#75e3f0',
-      cta: '#f2a6c6',
-      alert: '#F25757',
-      warn: '#F7D08A',
-      success: '#00A878'
-    },
     extend: {
+      colors: {
+        background: '#ffffff',
+        'background-light': '#1c3254',
+        text: '#2e2e2e',
+        blush: '#ffeaee',
+        accent: '#75e3f0',
+        cta: '#f2a6c6',
+        alert: '#F25757',
+        warn: '#F7D08A',
+        success: '#00A878'
+      },
       fontFamily: {
-        sans: ['Nunito', ...defaultTheme.fontFamily.sans]
+        sans: ['var(--font-satoshi)', ...fontFamily.sans]
       },
       typography: {
         xl: {
@@ -32,8 +33,11 @@ module.exports = {
             h3: {
               fontWeight: '500'
             },
+            p: {
+              fontWeight: '500'
+            },
             blockquote: {
-              backgroundColor: '#1c3254',
+              backgroundColor: '#F3F4F6',
               borderRadius: '1rem',
               paddingLeft: '2rem',
               paddingRight: '2rem',
