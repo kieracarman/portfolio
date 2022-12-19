@@ -1,22 +1,24 @@
 import '@styles/globals.css'
 import type { AppType } from 'next/dist/shared/lib/utils'
 import { useRouter } from 'next/router'
-import { AnimatePresence } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
+import localFont from '@next/font/local'
 
 import seo from '../../next-seo.config.mjs'
+
+const satoshi = localFont({
+  src: '../fonts/Satoshi-Variable.woff2',
+  variable: '--font-satoshi'
+})
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   const router = useRouter()
 
   return (
-    <AnimatePresence
-      exitBeforeEnter
-      onExitComplete={() => window.scrollTo(0, 0)}
-    >
+    <div className={`${satoshi.variable} font-sans antialiased`}>
       <DefaultSeo {...seo} />
       <Component {...pageProps} key={router.asPath} />
-    </AnimatePresence>
+    </div>
   )
 }
 

@@ -1,51 +1,37 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { motion } from 'framer-motion'
 
-import { slideDown } from '@lib/animations'
-
-const NavItem = ({ href, text }: { href: string; text: string }) => {
-  const router = useRouter()
-  const isActive = router.asPath === href
-
+const NavItem = ({
+  className = '',
+  href,
+  text
+}: {
+  className?: string
+  href: string
+  text: string
+}) => {
   return (
     <div>
-      {isActive ? (
-        <span>{text}</span>
-      ) : (
-        <Link href={href}>
-          <a className='opacity-40 transition duration-200 hover:opacity-100'>
-            {text}
-          </a>
-        </Link>
-      )}
+      <Link
+        href={href}
+        className={`${className} opacity-100 transition duration-200 hover:opacity-75`}
+      >
+        {text}
+      </Link>
     </div>
   )
 }
 
 const NavBar = () => {
   return (
-    <motion.header
-      variants={slideDown}
-      initial='offscreen'
-      animate='onscreen'
-      exit='offscreen'
-      className='flex items-center justify-between p-4 md:p-6 lg:p-8'
-    >
-      <div className='text-xl font-medium uppercase text-accent opacity-40 transition duration-200 hover:opacity-100'>
-        <Link href='/' scroll={false}>
-          <a>Kiera Carman</a>
-        </Link>
-      </div>
+    <header className='mx-auto flex max-w-6xl items-baseline justify-between px-4 pb-2 pt-8 md:px-8 md:pt-16 md:pb-8'>
+      <Link href='/' className='text-2xl font-black md:text-5xl'>
+        Kiera Carman
+      </Link>
 
-      {/* desktop nav links */}
-      <nav className='hidden text-accent'>
-        <NavItem href='/' text='Home' />
-        <NavItem href='/#about' text='About' />
-        <NavItem href='/#projects' text='Projects' />
-        <NavItem href='/#contact' text='Contact' />
+      <nav className='flex items-baseline gap-8 text-base font-semibold md:text-lg'>
+        <NavItem href='/#contact' text='Contact / Resume' />
       </nav>
-    </motion.header>
+    </header>
   )
 }
 

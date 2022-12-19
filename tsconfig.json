@@ -5,6 +5,7 @@
       "@components/*": ["src/components/*"],
       "@content/*": ["src/content/*"],
       "@env/*": ["src/env/*"],
+      "@fonts/*": ["src/fonts/*"],
       "@lib/*": ["src/lib/*"],
       "@pages/*": ["src/pages/*"],
       "@public/*": ["public/*"],

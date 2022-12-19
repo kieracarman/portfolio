@@ -3,7 +3,6 @@ import { NextSeo } from 'next-seo'
 
 import { allProjects, type Project } from 'contentlayer/generated'
 import Layout from '@components/Layout'
-import About from '@components/About'
 import Projects from '@components/Projects'
 import Contact from '@components/Contact'
 
@@ -27,7 +26,6 @@ const Home = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
       />
 
       <Layout>
-        <About />
         <Projects projects={projects} />
         <Contact />
       </Layout>

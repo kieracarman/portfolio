@@ -53,10 +53,10 @@ const AnimatedBars = () => {
   }, [])
 
   return (
-    <div className='flex items-center gap-[3px]'>
-      <span className='h-1 w-1 bg-accent opacity-75' id='bar1' />
-      <span className='h-1 w-1 bg-accent' id='bar2' />
-      <span className='h-3 w-1 bg-accent opacity-80' id='bar3' />
+    <div className='flex items-center gap-[3px] opacity-70'>
+      <span className='h-1 w-1 bg-text opacity-75' id='bar1' />
+      <span className='h-1 w-1 bg-text' id='bar2' />
+      <span className='h-3 w-1 bg-text opacity-80' id='bar3' />
     </div>
   )
 }
@@ -73,7 +73,7 @@ const NowPlaying = () => {
         />
       </svg>
       {data?.songUrl ? <AnimatedBars /> : ''}
-      <div className='font-bold text-accent'>
+      <div className='font-semibold'>
         {data?.songUrl ? (
           <a
             className='opacity-80 transition duration-150 hover:opacity-100'
