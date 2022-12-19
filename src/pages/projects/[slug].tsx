@@ -42,7 +42,7 @@ const Project = ({
       />
 
       <Layout>
-        <article className='mb-4 2xl:mt-8'>
+        <article className='mb-4'>
           <div className='mx-auto px-4 md:max-w-6xl' style={{ fontSize: 0 }}>
             <Browser>
               <Image
