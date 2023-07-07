@@ -21,13 +21,13 @@ const Contact = () => {
         >
           {buttonText}
         </button>
-        <a
+        {/*<a
           download='Resume-Kiera-Carman.pdf'
           href='/resume.pdf'
           className={`${buttonClasses} underline md:p-6 md:text-3xl`}
         >
           Resume-Kiera-Carman.pdf
-        </a>
+        </a>*/}
       </div>
     </section>
   )
